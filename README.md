@@ -56,12 +56,11 @@ The project evaluates several strategies for achieving this, with a focus on ent
 | Neural Network                   | 86.18%        | 0.846    | 0.363  |
 | Domain-Adapted Neural Network    | 86.87%        | 0.855    | 0.351  |
 
-## Key Takeaways
+## Observations
 
 - Logistic regression on PCA features performs well because PCA removes noise and redundancy, making the data easier to separate linearly.
 - Kernel PCA introduces nonlinearity but can overfit on small or noisy data, often without improving performance.
 - Entropy regularization helps domain adaptation by encouraging confident predictions on unlabeled target data, improving generalization.
-- Complex models need proper regularization and domain-aware loss functions to avoid overfitting and to handle shifts between training and test domains.
 
 ## More Details
 For more details about our models or our results, please refer to the report in this repository.
