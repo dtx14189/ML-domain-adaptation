@@ -1,6 +1,10 @@
 # Domain Adaptation for Cell Type Classification in scRNA-seq Data
 
-This project explores a domain adaptation approach to classifying cell types in single-cell RNA-sequencing (scRNA-seq) datasets, particularly focusing on transferring knowledge from healthy cells (source domain) to diseased cells (target domain). The goal is to build robust classifiers that generalize well to the out-of-distribution (diseased) dataset without using its labels during training.
+This project explores domain adaptation for cell type classification in single-cell RNA sequencing (scRNA-seq) data. Each cell is represented by a high-dimensional feature vector, where the features correspond to gene expression levels across thousands of genes. The target variable is the cell type label (e.g., T cell, B cell, macrophage).
+
+The central challenge lies in training a model on labeled data from healthy individuals (source domain) and applying it to unlabeled data from diseased individuals (target domain), where the expression profiles may differ significantly due to disease-induced changes. Because labeled data from the diseased domain is unavailable during training, the model must learn domain-invariant representations — features that are informative of cell type but not specific to the domain — to generalize effectively to the target distribution.
+
+The project evaluates several strategies for achieving this, with a focus on entropy regularization, which encourages the model to make confident predictions on the target domain despite not having labels.
 
 ## Dataset
 
